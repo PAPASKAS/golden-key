@@ -1,0 +1,66 @@
+@import '../../node_modules/bootstrap/scss/bootstrap', '../../node_modules/swiper/swiper-bundle.min.css';
+
+.section {
+    padding: 40px 0;
+
+    &:nth-child(2n) {
+        background: #f2f3f4;
+    }
+}
+
+// home intro
+.home-intro {
+
+    img {
+        height: calc(100vh - 56px);
+        object-fit: cover;
+    }
+    .container {
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+    }
+    &__text {
+
+    }
+}
+
+
+// projects demo
+.projects-demo {
+
+    .card {
+        padding: 0;
+    }
+}
+
+
+//recommendation-slider
+.service-slider {
+
+    .swiper-wrapper {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr 1fr;
+    }
+    .swiper-slide {
+        .card {
+            height: 100%;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+            > div {
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                background: rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+}
