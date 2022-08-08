@@ -1,4 +1,16 @@
-@import '../../node_modules/bootstrap/scss/bootstrap', '../../node_modules/swiper/swiper-bundle.min.css';
+@import '../../node_modules/bootstrap/scss/bootstrap',
+'../../node_modules/swiper/swiper-bundle.min.css',
+'../../node_modules/noty/src/noty',
+'../../node_modules/noty/lib/themes/nest.css',
+'register';
+
+body, html {
+    height: 100%;
+}
+
+.slot {
+    min-height: 100%;
+}
 
 .section {
     padding: 40px 0;

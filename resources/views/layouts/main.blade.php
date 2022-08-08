@@ -1,5 +1,7 @@
 <x-header />
-    <main>
-        {{ $slot }}
-    </main>
+
+<main class="slot">
+    {{ $slot }}
+</main>
+
 <x-footer />
