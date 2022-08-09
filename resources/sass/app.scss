@@ -2,7 +2,12 @@
 '../../node_modules/swiper/swiper-bundle.min.css',
 '../../node_modules/noty/src/noty',
 '../../node_modules/noty/lib/themes/nest.css',
+'index',
 'register';
+
+// colors
+$primary: #ffc107;
+
 
 body, html {
     height: 100%;
@@ -20,59 +25,8 @@ body, html {
     }
 }
 
-// home intro
-.home-intro {
-
-    img {
-        height: calc(100vh - 56px);
-        object-fit: cover;
-    }
-    .container {
-        bottom: 0;
-        top: 0;
-        left: 0;
-        right: 0;
-        display: flex;
-        align-items: center;
-    }
-    &__text {
-
-    }
-}
-
-
-// projects demo
-.projects-demo {
-
-    .card {
-        padding: 0;
-    }
-}
-
-
-//recommendation-slider
-.service-slider {
-
-    .swiper-wrapper {
-        display: grid;
-        grid-auto-flow: column;
-        grid-template-columns: 1fr 1fr;
-    }
-    .swiper-slide {
-        .card {
-            height: 100%;
-
-            img {
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            }
-            > div {
-                display: flex;
-                flex-direction: column;
-                justify-content: end;
-                background: rgba(0, 0, 0, 0.3);
-            }
-        }
-    }
+.form-control-primary:focus {
+    border-color: $primary;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba($primary, .35);
 }

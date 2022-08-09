@@ -16,6 +16,6 @@
             <p class="card-text">Стоимость строительства: <strong>10000000 руб</strong></p>
         </div>
 
-        <a href="/" class="btn btn-dark mt-3">Посмотреть</a>
+        <a href="/" class="btn btn-warning mt-3"><strong>Посмотреть</strong></a>
     </div>
 </div>

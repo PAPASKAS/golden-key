@@ -32,20 +32,13 @@ new Swiper('.serviceSwiper', {
     }
 });
 
-// For all form event submit
-document.querySelectorAll('form').forEach((form) => {
+// For all .common-form event submit
+document.querySelectorAll('.common-form').forEach((form) => {
     form.addEventListener('submit', (event) => {
         event.preventDefault();
 
-        const data = {};
-        for (let i = 0; i < event.target.length; i++) {
-            const target = event.target[i];
-            if (target.name)
-                data[target.name] = target.value.trim();
-        }
-
         Axios({
-            data,
+            data: new FormData(event.target),
             withCredentials: true,
             method: event.target.method,
             url: event.target.action,
@@ -61,9 +54,9 @@ document.querySelectorAll('form').forEach((form) => {
                 // For dev debug
                 console.log(err.response);
 
-                if(err.response.status >= 500) {
-                    noty("Непредвиденная ошибка сервера!", 'error');
-                }
+                if(err.response.status >= 500 || err.response.status === 419)
+                    noty(err.response.data.message, 'error');
+
                 const errArr = Object.values(err.response.data.errors);
 
                 errArr.forEach((error) => {

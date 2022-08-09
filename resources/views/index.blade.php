@@ -5,10 +5,12 @@
 
         <div class="container position-absolute">
             <div class="home-intro__text">
-                <h1>Мы - золотой ключик</h1>
-                <p>Построим все что захотите</p>
-                <p>с гарантией наилучшего обслуживания</p>
-                <a href="/" class="btn btn-dark">Оставить заявку</a>
+                <h1><strong>Мы - золотой ключик</strong></h1>
+                <p>
+                    Построим все что захотите<br/>
+                    с гарантией наилучшего обслуживания
+                </p>
+                <a href="/" class="btn btn-warning"><strong>Оставить заявку</strong></a>
             </div>
         </div>
     </section>
@@ -40,15 +42,29 @@
         <div class="container">
             <h2 class="text-center mb-4">Готовые проекты</h2>
             <div class="row justify-content-md-evenly justify-content-center gap-4">
-                <x-project-card />
-                <x-project-card />
-                <x-project-card />
-                <x-project-card />
-                <x-project-card />
-                <x-project-card />
-                <x-project-card />
-                <x-project-card />
-                <x-project-card />
+                @foreach($real_estates as $real_estate)
+                    <div class="card col-lg-3 col-md-5 col-12">
+                        <img src="/storage/images/real-estates/{{ $real_estate->image_uri }}" class="card-img-top" alt="home" />
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $real_estate->name }}</h5>
+                            <div class="row justify-content-between mb-3">
+                                <div class="col-5 text-nowrap">Размеры: <strong>{{ $real_estate->dimensions }}</strong></div>
+                                <div class="col-5 text-nowrap">Комнат: <strong>{{ $real_estate->rooms }}</strong></div>
+                                <div class="col-5 text-nowrap">Площадь: <strong>{{ $real_estate->square }}м<sup>2</sup></strong></div>
+                                <div class="col-5 text-nowrap">Спален: <strong>3</strong></div>
+                            </div>
+                            <div class="mb-3">
+                                <div>Тип дома: <strong>Газонобетон</strong></div>
+                                <div>Срок строительства: <strong>3 месяца</strong></div>
+                            </div>
+                            <div>
+                                <p class="card-text">Стоимость строительства: <strong>{{ $real_estate->cost }} руб</strong></p>
+                            </div>
+
+                            <a href="{{ route('real-estate.show', $real_estate->id) }}" class="btn btn-warning mt-3"><strong>Посмотреть</strong></a>
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>

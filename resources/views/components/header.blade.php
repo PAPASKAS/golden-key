@@ -71,9 +71,9 @@
                     </ul>
                 </li>
             </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search">
-                <button class="btn btn-outline-light" type="submit">Поиск</button>
+            <form class="d-flex common-form" role="search">
+                <input class="form-control form-control-primary me-2" type="search" placeholder="Поиск" aria-label="Search">
+                <button class="btn btn-outline-warning" type="submit">Поиск</button>
             </form>
         </div>
     </div>

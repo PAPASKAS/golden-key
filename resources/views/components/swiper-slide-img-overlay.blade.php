@@ -5,7 +5,7 @@
             <h5 class="card-title text-uppercase"><strong>{{ $title }}</strong></h5>
             <p class="card-text"><strong>{{ $description }}</strong></p>
             <div>
-                <a href="/" class="btn btn-dark">Перейти</a>
+                <a href="/" class="btn btn-warning"><strong>Перейти</strong></a>
             </div>
         </div>
     </div>

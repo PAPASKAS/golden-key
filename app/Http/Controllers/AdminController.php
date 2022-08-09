@@ -11,10 +11,10 @@ class AdminController extends Controller
     {
         if (Auth::user()->admin) {
             return view('admin', [
-                'real_estates' => DB::table('real_estates')->get(),
+                'real_estates' => DB::table('real_estates')->latest()->get(),
             ]);
         } else {
-            return redirect('/');
+            return redirect('index');
         }
     }
 }
