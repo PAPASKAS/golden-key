@@ -34,7 +34,7 @@ class RealEstatesController extends Controller
         if ($request->image_uri) {
             // delete old file
             $file = RealEstate::find($id)->image_uri;
-            Storage::disk('public')->delete('images/real-estates', $file);
+            Storage::disk('public')->delete('images/real-estates/' . $file);
             // upload new file
             $new_file = Storage::disk('public')->put('images/real-estates', $request->file('image_uri'));
 
@@ -88,7 +88,7 @@ class RealEstatesController extends Controller
     {
         if (Auth::user()->admin) {
             $file = RealEstate::find($id)->image_uri;
-            Storage::disk('public')->delete('images/real-estates' . $file);
+            Storage::disk('public')->delete('images/real-estates/' . $file);
             RealEstate::destroy($id);
         }
     }

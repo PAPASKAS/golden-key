@@ -55,7 +55,7 @@ document.querySelectorAll('.common-form').forEach((form) => {
                 console.log(err.response);
 
                 if(err.response.status >= 500 || err.response.status === 419)
-                    noty(err.response.data.message, 'error');
+                    noty('Непредвиденная ошибка сервера!', 'error');
 
                 const errArr = Object.values(err.response.data.errors);
 

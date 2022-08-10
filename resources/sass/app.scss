@@ -11,6 +11,7 @@ $primary: #ffc107;
 
 body, html {
     height: 100%;
+    font-family: 'Nunito', sans-serif;
 }
 
 .slot {
@@ -29,4 +30,11 @@ body, html {
     border-color: $primary;
     outline: 0;
     box-shadow: 0 0 0 0.25rem rgba($primary, .35);
+}
+
+header {
+
+    .navbar-brand img {
+        width: 35px;
+    }
 }
