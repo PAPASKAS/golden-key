@@ -62,7 +62,7 @@
                 <div class="card col-lg-3 col-md-5 col-12">
                     <img src="/storage/images/temp/160d972c-e16c-4868-ae08-79746549b185.jpeg" class="card-img-top" alt="home" />
                     <div class="card-body">
-                        <h5 class="card-title">Строющийся дом</h5>
+                        <h5 class="card-title">Cтроящийся дом</h5>
                         <hr>
                         <div>
                             <div>Материал стен: <strong>блок</strong></div>

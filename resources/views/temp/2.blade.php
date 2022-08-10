@@ -10,7 +10,7 @@
 <x-main-layout>
     <div class="container my-4">
         <div class="mb-3 row align-items-center justify-content-between">
-            <h2 class="col">Строющийся дом</h2>
+            <h2 class="col">Cтроящийся дом</h2>
             <div class="col">13 июля в 21:22</div>
         </div>
         <div class="row">
@@ -38,7 +38,7 @@
             <div class="col">
                 <div class="card">
                     <div class="card-body d-grid">
-                        <h5 class="card-title"><strong>Краснодарский край, Новороссийск, пр-т Ленина, 103</strong></h5>
+                        <h5 class="card-title"><strong>Краснодарский край, Новороссийск, поселок Убых</strong></h5>
                         <a href="tel:+79002813113">+7900 281-31-13</a>
                         <a href="">Видео консультанция</a>
                         <a href="">Спросить у продавца</a>
