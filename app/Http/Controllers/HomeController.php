@@ -9,8 +9,9 @@ class HomeController extends Controller
 {
     public function __invoke(): View
     {
-        return view('index', [
-            'real_estates' => RealEstate::all(),
-        ]);
+//        return view('index', [
+//            'real_estates' => RealEstate::all(),
+//        ]);
+        return view('index');
     }
 }
